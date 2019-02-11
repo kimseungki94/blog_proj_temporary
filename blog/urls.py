@@ -4,6 +4,7 @@ import blogapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',blogapp.views.home, name='home'),
-    path('blog/',include('blogapp.urls'))
+    path('blog/',include('blogapp.urls')),
+    
 ]
 
