@@ -3,6 +3,9 @@ from .models import Blog
 from django.core.paginator import Paginator #페이지를 나눌때 사용하는 import
 from django.utils import timezone #timezone사용방법
 from .form import BlogPost
+
+
+
 def home(request):
     blogs = Blog.objects #쿼리셋
     blog_list = Blog.objects.all() #블로그 모든 글들을 대상
@@ -36,7 +39,6 @@ def blogpost(request):
    else:
       form = BlogPost()
       return render(request,'new.html',{'form':form})
-
 
 
 

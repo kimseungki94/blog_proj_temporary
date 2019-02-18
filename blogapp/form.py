@@ -8,6 +8,7 @@ class BlogPost(forms.ModelForm):
         model = Blog
         fields = ['title','body']
 
+
 # forms.Form
 #  email = forms.EmailField()
 #     files = forms.FileField()
