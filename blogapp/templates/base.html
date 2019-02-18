@@ -34,7 +34,12 @@
             Page
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         
+            {% if user.is_authenticated %}
+            <p class="dropdown-item" >{{user.username}}님 안녕하세요!</p>
+            {% else %}
             <a class="dropdown-item" href="{% url 'login' %}">로그인</a>
+            {% endif %}
             <a class="dropdown-item" href="{% url 'logout' %}">로그아웃</a>
             <a class="dropdown-item" href="{% url 'signup' %}">회원가입</a>
             <div class="dropdown-divider"></div>
@@ -45,7 +50,10 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      
+      <form class="form-inline">
+        <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </div>
   </nav>
   <br><br><br>
