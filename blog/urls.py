@@ -9,7 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',blogapp.views.home, name='home'),
     path('blog/',include('blogapp.urls')),
+    path('accounts/',include('account.urls')),
     path('portfolio/',portfolio.views.portfolio,name="portfolio"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # + 이후에 있는거는 암기
 #OR urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 로 써도됨

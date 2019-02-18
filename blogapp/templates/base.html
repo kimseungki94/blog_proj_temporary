@@ -34,10 +34,11 @@
             Page
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/">github</a>
-            <a class="dropdown-item" href="/">naver</a>
+            <a class="dropdown-item" href="{% url 'login' %}">로그인</a>
+            <a class="dropdown-item" href="{% url 'logout' %}">로그아웃</a>
+            <a class="dropdown-item" href="{% url 'signup' %}">회원가입</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/">classLion</a>
+            <a class="dropdown-item" href="{% url 'portfolio' %}">포트폴리오</a>
           </div>
         </li>
         <li class="nav-item">
