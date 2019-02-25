@@ -23,6 +23,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites', #소셜할때 넣기
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -30,6 +31,13 @@ INSTALLED_APPS = [
     'blogapp.apps.AppConfig',
     'portfolio.apps.PortfolioConfig',
     'account.apps.AccountConfig',
+    #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    #provider 구글 페이스북 카톡 깃헙 등등
+    'allauth.socialaccount.provider.google', 
 ]
 
 MIDDLEWARE = [

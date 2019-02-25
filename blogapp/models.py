@@ -5,6 +5,9 @@ class Blog(models.Model):
     pub_date = models.DateTimeField('date published')
     body= models.TextField()
 
+class Social(models.Model):
+    text = models.TextField()
+
 
 #blog object라고 써져있는거 바꾸고싶을때
     def __str__(self):
