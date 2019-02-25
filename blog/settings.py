@@ -31,13 +31,7 @@ INSTALLED_APPS = [
     'blogapp.apps.AppConfig',
     'portfolio.apps.PortfolioConfig',
     'account.apps.AccountConfig',
-    #allauth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
-    #provider 구글 페이스북 카톡 깃헙 등등
-    'allauth.socialaccount.provider.google', 
+    
 ]
 
 MIDDLEWARE = [
@@ -120,6 +114,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+AUTHENTICATION_BACKENDS = (
+    # needed to login by username in Django admin, regardless of 'allauth'
+    'django.contrib.auth.backends.ModelBackend',
+    # allauth specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+
+# 기타설정
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio','static')
