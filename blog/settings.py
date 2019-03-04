@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = '_4ih@rl@q2fx8o+37bd_8=9yq_39-jph48ju+)$ybini5)#h7_'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '_4ih@rl@q2fx8o+37bd_8=9yq_39-jph48ju+)$ybini5)#h7_')
 
-# # SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG',True))
 
@@ -76,7 +76,7 @@ DATABASES = {
     }
 }
 
-
+# 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
