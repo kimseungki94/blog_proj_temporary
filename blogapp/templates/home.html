@@ -5,7 +5,6 @@
     <div class="container">
         <div class="alert alert-info" role="alert">
             <h2>총 {{blogs.count}}개의 블로그 글이 있습니다</h2>
-            <h2>총 {{blogs.count}}개의 블로그 글이 있습니다</h2>
         </div>
 
         <br><br><br>
@@ -15,7 +14,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{blog.title}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{blog.pub_date.month}}</h6>
                 <p class="card-text">{{blog.summary}}...</p>
                 <a href=" {%url 'detail' blog.id%} ">more</a>
             </div>
